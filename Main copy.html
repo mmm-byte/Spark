@@ -315,40 +315,20 @@
   <div class="px-6 pt-safe pb-5 flex-shrink-0 hairline" style="border-bottom:1px solid var(--hairline)">
     <div class="flex justify-between items-center mt-3">
       <div class="flex items-center gap-2.5">
-        <span class="spark-mark" style="width:36px;height:36px">
-          <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="brandGradShell" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#FBBF24" />
-                <stop offset="100%" stop-color="#B45309" />
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="40" height="40" rx="11" fill="#0E0F11" />
-            <path d="M8 21 L20 11 L32 21 L32 32 L8 32 Z" fill="url(#brandGradShell)" />
-            <rect x="17.5" y="24" width="5" height="8" fill="#0E0F11" />
-            <path d="M28.5 9 L30.5 12 L33.5 13 L30.5 14 L28.5 17 L26.5 14 L23.5 13 L26.5 12 Z" fill="#FBBF24" />
-          </svg>
-        </span>
+        ${Icons.brand(36)}
         <div>
           <p class="text-[10px] uppercase tracking-[0.2em] font-semibold" style="color:var(--ink-3)">Spark Homes</p>
           <p class="display font-bold text-base leading-none mt-0.5">Repair Estimator</p>
         </div>
       </div>
-      <button id="close-panel-btn" class="w-9 h-9 rounded-full flex items-center justify-center press" style="background:var(--surface-2);color:var(--ink-2)" title="Close" aria-label="Close panel">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>
-      </button>
+      <button id="close-panel-btn" class="w-9 h-9 rounded-full flex items-center justify-center press" style="background:var(--surface-2);color:var(--ink-2)" title="Close">${Icons.uiIcon('close', 16)}</button>
     </div>
     <p class="text-xs mt-2.5" style="color:var(--ink-2)">All your properties</p>
   </div>
   <div class="flex-1 overflow-y-auto" id="panel-list"></div>
   <div class="p-4 flex-shrink-0 pb-safe flex gap-2 hairline" style="border-top:1px solid var(--hairline)">
-    <button id="new-project-btn" class="flex-1 py-3.5 rounded-xl font-semibold text-sm press inline-flex items-center justify-center gap-1.5" style="background:var(--ink);color:var(--ink-inv)">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5 V19 M5 12 H19"/></svg>
-      New flip
-    </button>
-    <button id="open-materials-btn" class="px-4 py-3.5 rounded-xl font-semibold text-sm press" style="background:var(--surface-2);color:var(--ink)" title="Bulk materials" aria-label="Open materials">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7 L12 3 L21 7 V17 L12 21 L3 17 Z"/><path d="M3 7 L12 11 L21 7"/><path d="M12 11 V21"/></svg>
-    </button>
+    <button id="new-project-btn" class="flex-1 py-3.5 rounded-xl font-semibold text-sm press inline-flex items-center justify-center gap-1.5" style="background:var(--ink);color:var(--ink-inv)">${Icons.uiIcon('plus', 16)} New flip</button>
+    <button id="open-materials-btn" class="px-4 py-3.5 rounded-xl font-semibold text-sm press" style="background:var(--surface-2);color:var(--ink)" title="Bulk materials">${Icons.uiIcon('box', 16)}</button>
   </div>
 </div>
 
@@ -358,23 +338,15 @@
   <div class="absolute inset-x-0 bottom-0 pointer-events-auto" style="background:var(--surface);border-radius:28px 28px 0 0;box-shadow:0 -20px 50px rgba(0,0,0,0.3);max-height:80vh;display:flex;flex-direction:column">
     <div class="px-6 pt-5 pb-3 flex-shrink-0 flex justify-between items-center">
       <h2 class="font-semibold text-lg display">Settings</h2>
-      <button id="settings-close" class="w-9 h-9 rounded-full flex items-center justify-center press" style="background:var(--surface-2);color:var(--ink-2)" aria-label="Close settings">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6 L18 18 M18 6 L6 18"/></svg>
-      </button>
+      <button id="settings-close" class="w-9 h-9 rounded-full flex items-center justify-center press" style="background:var(--surface-2);color:var(--ink-2)">${Icons.uiIcon('close', 16)}</button>
     </div>
     <div class="overflow-y-auto flex-1 px-6 py-5 pb-safe">
       <!-- Appearance -->
       <div class="mb-7">
         <h3 class="font-semibold text-sm mb-3 display">Appearance</h3>
         <div class="flex gap-2" id="theme-buttons">
-          <button data-theme="light" class="flex-1 py-3 rounded-xl border-2 font-medium text-sm press inline-flex items-center justify-center gap-2" style="border-color:var(--hairline)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2 V4 M12 20 V22 M2 12 H4 M20 12 H22 M4.9 4.9 L6.3 6.3 M17.7 17.7 L19.1 19.1 M4.9 19.1 L6.3 17.7 M17.7 6.3 L19.1 4.9"/></svg>
-            Light
-          </button>
-          <button data-theme="dark"  class="flex-1 py-3 rounded-xl border-2 font-medium text-sm press inline-flex items-center justify-center gap-2" style="border-color:var(--hairline)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 13 a8 8 0 1 1 -10 -10 a6 6 0 0 0 10 10 Z"/></svg>
-            Dark
-          </button>
+          <button data-theme="light" class="flex-1 py-3 rounded-xl border-2 font-medium text-sm press inline-flex items-center justify-center gap-2" style="border-color:var(--hairline)">${Icons.uiIcon('sun', 16)} Light</button>
+          <button data-theme="dark"  class="flex-1 py-3 rounded-xl border-2 font-medium text-sm press inline-flex items-center justify-center gap-2" style="border-color:var(--hairline)">${Icons.uiIcon('moon', 16)} Dark</button>
         </div>
       </div>
       <!-- Pricing -->
@@ -407,14 +379,8 @@
       <div>
         <h3 class="font-semibold text-sm mb-1 display">More tools</h3>
         <div class="grid grid-cols-2 gap-2 mt-3">
-          <button data-action="open-compare" class="py-3 rounded-xl border-2 press text-sm font-semibold inline-flex items-center justify-center gap-2" style="border-color:var(--hairline);color:var(--ink)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17 L9 11 L13 15 L21 7"/><path d="M14 7 H21 V14"/></svg>
-            Compare
-          </button>
-          <button data-action="open-contractors" class="py-3 rounded-xl border-2 press text-sm font-semibold inline-flex items-center justify-center gap-2" style="border-color:var(--hairline);color:var(--ink)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14 a8 8 0 0 1 16 0 V17 H4 Z"/><path d="M2 17 H22"/><path d="M12 6 V4"/><path d="M12 4 L11 5 M12 4 L13 5"/></svg>
-            Crew
-          </button>
+          <button data-action="open-compare" class="py-3 rounded-xl border-2 press text-sm font-semibold inline-flex items-center justify-center gap-2" style="border-color:var(--hairline);color:var(--ink)">${Icons.uiIcon('trend', 16)} Compare</button>
+          <button data-action="open-contractors" class="py-3 rounded-xl border-2 press text-sm font-semibold inline-flex items-center justify-center gap-2" style="border-color:var(--hairline);color:var(--ink)">${Icons.uiIcon('helmet', 16)} Crew</button>
           <button data-action="reset-tutorial" class="col-span-2 py-3 rounded-xl border-2 press text-sm font-semibold inline-flex items-center justify-center gap-2" style="border-color:var(--hairline);color:var(--ink-2)">Show swipe tutorial again</button>
         </div>
       </div>
@@ -801,12 +767,8 @@ const Storage = {
     catch { return fallback; }
   },
   save(key, value) {
-    try {
-      localStorage.setItem(key, JSON.stringify(value));
-      return true;
-    } catch {
-      return false;
-    }
+    try { localStorage.setItem(key, JSON.stringify(value)); }
+    catch { /* quota — silent */ }
   },
 };
 
@@ -908,16 +870,13 @@ function saveProject() {
   };
   const idx = projects.findIndex(p => p.id === state.projectId);
   if (idx >= 0) projects[idx] = snap; else projects.unshift(snap);
-  return Storage.save(STORAGE.projects, projects);
+  Storage.save(STORAGE.projects, projects);
 }
 
 let _saveTimer;
 function scheduleSave() {
   clearTimeout(_saveTimer);
-  _saveTimer = setTimeout(() => {
-    const ok = saveProject();
-    showToast(ok ? 'Saved' : 'Storage full');
-  }, 600);
+  _saveTimer = setTimeout(() => { saveProject(); showToast('Saved'); }, 600);
 }
 
 /* =================================================================
@@ -1201,10 +1160,7 @@ function extractSerialFromText(text) {
 
 async function attachPhotoWithOCR(stateId, file) {
   const dataUrl = await compressImage(file);
-  if (!dataUrl) {
-    showToast('Could not process photo');
-    return;
-  }
+  if (!dataUrl) return;
   if (!state.photos[stateId]) state.photos[stateId] = [];
   const photo = { dataUrl, name: file.name, serial: '' };
   state.photos[stateId].push(photo);
@@ -1219,35 +1175,27 @@ async function attachPhotoWithOCR(stateId, file) {
   const overlay = document.getElementById('ocr-overlay');
   const statusEl = document.getElementById('ocr-status');
   const progressEl = document.getElementById('ocr-progress');
-  try {
-    overlay.style.display = 'flex';
-    statusEl.textContent = 'Loading Tesseract…';
-    progressEl.style.width = '5%';
+  overlay.style.display = 'flex';
+  statusEl.textContent = 'Loading Tesseract…';
+  progressEl.style.width = '5%';
 
-    const text = await runOCR(dataUrl, p => {
-      progressEl.style.width = (5 + p * 95) + '%';
-      statusEl.textContent = `Reading… ${Math.round(p * 100)}%`;
-    });
+  const text = await runOCR(dataUrl, p => {
+    progressEl.style.width = (5 + p * 95) + '%';
+    statusEl.textContent = `Reading… ${Math.round(p * 100)}%`;
+  });
+  overlay.style.display = 'none';
 
-    if (text) {
-      const serial = extractSerialFromText(text);
-      if (serial) {
-        photo.serial = serial;
-        if (!state.items[stateId].serial) state.items[stateId].serial = serial;
-        scheduleSave();
-        render();
-        showToast(`Found serial: ${serial}`);
-      } else {
-        showToast('No serial number found');
-      }
+  if (text) {
+    const serial = extractSerialFromText(text);
+    if (serial) {
+      photo.serial = serial;
+      if (!state.items[stateId].serial) state.items[stateId].serial = serial;
+      scheduleSave();
+      render();
+      showToast(`Found serial: ${serial}`);
+    } else {
+      showToast('No serial number found');
     }
-  } catch (err) {
-    console.warn('OCR failed:', err);
-    showToast('Photo saved, OCR skipped');
-  } finally {
-    overlay.style.display = 'none';
-    progressEl.style.width = '0%';
-    statusEl.textContent = 'Starting up…';
   }
 }
 
@@ -1670,7 +1618,7 @@ function renderSwipeDeck(cards, currentIdx) {
     if (offset === 0) {
       return `<div class="swipe-card" data-card-id="${card.deckId}">
         <div class="swipe-hint right">Needs work</div>
-        <div class="swipe-hint left">No action needed</div>
+        <div class="swipe-hint left">No action</div>
         <div class="swipe-hint up">Skip</div>
         ${renderSwipeCardContent(card, true)}
       </div>`;
@@ -1753,7 +1701,7 @@ function renderSwipeCardContent(card, isActive) {
       <!-- Hint inside card -->
       <div class="px-5 pb-4 pt-2 flex-shrink-0" style="border-top:1px solid var(--hairline);background:var(--surface)">
         <div class="flex justify-between items-center px-1 text-[10px] font-bold uppercase tracking-wider" style="color:var(--ink-2)">
-          <span class="flex items-center gap-1.5"><span class="w-5 h-5 rounded-full flex items-center justify-center" style="background:var(--ink-2);color:white">←</span> No action needed</span>
+          <span class="flex items-center gap-1.5"><span class="w-5 h-5 rounded-full flex items-center justify-center" style="background:var(--ink-2);color:white">←</span> No action</span>
           <span class="flex items-center gap-1.5"><span class="w-5 h-5 rounded-full flex items-center justify-center" style="background:var(--accent);color:white">↑</span> Skip</span>
           <span class="flex items-center gap-1.5">Needs work <span class="w-5 h-5 rounded-full flex items-center justify-center" style="background:var(--success);color:white">→</span></span>
         </div>
@@ -1794,7 +1742,7 @@ function showTutorial() {
             </div>
             <div>
               <p class="font-semibold text-sm">Swipe left</p>
-              <p class="text-xs" style="color:var(--ink-2)">No action needed — this group is fine</p>
+              <p class="text-xs" style="color:var(--ink-2)">No action — this group is fine</p>
             </div>
           </div>
           <div class="flex items-center gap-3 p-3 rounded-xl" style="background:var(--surface-2)">
@@ -2518,7 +2466,7 @@ function handleSwipeCommit(dir) {
     go('group-edit');
   } else if (dir === 'left') {
     markGroup(card.id, 'skip', card.instanceId);
-    showToast('Saved');
+    showToast('No action · saved');
     advance();
     scheduleSave();
   } else if (dir === 'up') {
